@@ -1,8 +1,10 @@
 import TelegramBot from 'node-telegram-bot-api';
 import fs from 'fs';
+import 'dotenv/config'
 
-const token = '8242549919:AAGPV06mZYE66ZCkzrlDBSsCZeO2xWcX5jw';
-const adminId = 7760337711;
+
+const token = process.env.BOT_TOKEN;
+const adminId = process.env.ADMIN_ID;
 
 const bot = new TelegramBot(token, { polling: true });
 console.log('🤖 Bot ishga tushdi...');
